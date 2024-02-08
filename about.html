@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title></title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- reset,sanitize,style -->
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NMVMKDZDCK');
+    </script>
+</head>
+<body>
+    <div id="logo-media">
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <h1><a href="index.html">IZUMI SATO</a></h1>
+    </div>
+    <nav>
+        <div id="logo"><h1><a href="index.html">IZUMI SATO</a></h1></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><h2 class="text">Home</h2></a></li>
+            <li><a href="about.html" class="active"><h2 class="text">About</h2></a></li>
+            <li><a href="gallery.html"><h2 class="text">Gallery</h2></a></li>
+            <li><a href="contact.html"><h2 class="text">Contact</h2></a></li>
+            <li><a href="https://www.instagram.com/izumi___printmaker/" target="_blank"><h2 class="text">Instagram</h2></a></li>
+            <li><a href="https://www.etsy.com/jp/shop/izumisatoart" ><h2 class="textF">Shop</h2></a></li>
+        </ul>
+        
+    </nav>
+    <div class="about-container">
+        <div class="about-text-img">
+            <img src="./img/about-text-img.png" alt="">
+        </div>
+        <div class="about-profile">
+            <table class="table table-adjust">
+                <tr class="textAni">
+                    <td>1968年</td>
+                    <td class="text-left">　北海道生まれ</td>
+                </tr>
+                <tr class="textAni">
+                    <td>2004年～</td>
+                    <td class="text-left">上海半島工作室にて木版画を学ぶ。王劼音師に師事</td>
+                </tr>
+            </table>
+            <h2>個展　　　solo exhibition</h2>
+            <table class="table">
+                <tr class="textAni">
+                    <td>2007年2月</td>
+                    <td class="text-left">AYUMI GALLERY 個展　～めぐみはしずかにふりそそぎ～</td>
+                </tr>
+                <tr class="textAni">
+                    <td>2007年6月</td>
+                    <td class="text-left">上海「字坊沙龍 jibo salon」個展</td>
+                </tr>
+                <tr class="textAni">
+                    <td>2008年4月</td>
+                    <td class="text-left">AYUMI GALLERY 個展　～たぐいなきすくいわれにみつ～</td>
+                </tr>
+                <tr class="textAni">
+                    <td>2009年4月</td>
+                    <td class="text-left">AYUMI GALLERY 個展　～みみすますときむねのおくに～</td>
+                </tr>
+                <tr class="textAni">
+                    <td>2010年2月</td>
+                    <td class="text-left">AYUMI GALLERY 個展　～Pascals Gabet　パスカルの祈り～</td>
+                </tr>
+                <tr class="textAni">
+                    <td>2019年12月</td>
+                    <td class="text-left">AYUMI GALLERY 個展　～ひつじの森　二人展～</td>
+                </tr>
+            </table>
+            <h2>グループ展　　　group exhibition</h2>
+            <table class="table">
+                <tr class="textAni">
+                    <td>2019年6月</td>
+                    <td class="text-left">第22回トレスアニョス展</td>
+                </tr>
+                <tr class="textAni">
+                    <td>2020年3月</td>
+                    <td class="text-left">ひつじとねこのなかま展（九州糸島）</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+           
+    <footer>
+        <small><p>© IZUMI SATO 2020</p></small>
+    </footer>
+    
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="./js/app.js"></script>
+    <script>
+        //nav-animation
+        const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
+        tl.fromTo('.text', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 1, stagger: 0.25});
+        tl.fromTo('.textF', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 2}, '-=0.6');
+        gsap.fromTo('.textAni', {opacity: 0},  {opacity: 1, duration: 1, stagger: 0.11}), '-=3';
+    </script>
+</body>
+</html>

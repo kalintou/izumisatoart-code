@@ -1,0 +1,48 @@
+.active {
+    color: #000;
+}
+#logo-media {
+    display: none;
+}
+nav {
+    width: 250px;
+    height: 350px;
+    top: 5%;
+    //left: 16.5%;
+    //background: rgb(157, 157, 157);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    #logo {
+        margin: 25px auto;
+        h1{
+            font-size: 24px;
+            font-weight: bolder;
+            letter-spacing: 3px;
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    }
+    ul {
+        margin-top: 30%;
+        li {
+            font-size: 15px;
+            text-align: center;
+            height: 31%;
+        }
+        li a{
+            text-decoration: none;
+            letter-spacing: 2px;
+            color: #c2c2c2;
+            transition: all 0.5s ease;
+            &:hover {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    }
+}

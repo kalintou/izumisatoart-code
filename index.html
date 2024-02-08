@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title></title>
+
+    <!-- reset,sanitize,style -->
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NMVMKDZDCK');
+    </script>
+</head>
+<body class="bodyy">
+    <!--<div id="loading">
+        <img name="slide" alt="" width="250">    
+    </div>-->
+    <div id="logo-media">
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <h1><a href="index.html">IZUMI SATO</a></h1>
+    </div>
+    <nav>
+        <div id="logo"><h1><a href="index.html">IZUMI SATO</a></h1></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><h2 class="text">Home</h2></a></li>
+            <li><a href="about.html"><h2 class="text">About</h2></a></li>
+            <li><a href="gallery.html"><h2 class="text">Gallery</h2></a></li>
+            <li><a href="contact.html"><h2 class="text">Contact</h2></a></li>
+            <li><a href="https://www.instagram.com/izumi___printmaker/" target="_blank"><h2 class="text">Instagram</h2></a></li>
+            <li><a href="https://www.etsy.com/jp/shop/izumisatoart" ><h2 class="textF">Shop</h2></a></li>
+        </ul>
+        
+    </nav>
+    <div class="index-container">
+        <div id="slide">
+            <ul>
+            <li><a href=""><img src="./img/topImg1.jpg" alt="" width="500" /></a></li>
+            <li><a href=""><img src="./img/topImg2.jpg" alt="" width="470" /></a></li>
+            <!--<li><a href=""><img class="dd" src="./img/topIm3.jpg" style="margin-left: 50px;" alt="" height="535" /></a></li>
+            -->
+            </ul>
+        </div>
+    </div>
+           
+    <footer>
+        <small><p>© IZUMI SATO 2020</p></small>
+    </footer>
+    
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>
+
+
+        $(function(){
+            var $interval = 5000;
+            var $fade_speed = 3000; 
+
+            $("#slide ul li").hide().css({"position":"absolute"});
+            $("#slide ul li:first").addClass("active").show();
+            setInterval(function(){
+                var $active = $("#slide ul li.active");
+                var $next = $active.next("li").length?$active.next("li"):$("#slide ul li:first");
+                $active.fadeOut($fade_speed).removeClass("active");
+                $next.fadeIn($fade_speed).addClass("active");
+            },$interval);
+        });
+
+        //nav-animation
+        const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
+
+        tl.fromTo('.text', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 1, stagger: 0.25});
+
+        tl.fromTo('.textF', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 2}, '-=0.6');
+    </script>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.about-container {
+    width: 80%;
+    //height: 90vh;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    .about-text-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 80%;
+            margin: 50px auto;
+        }
+    }
+    .about-profile {
+        text-align: center;
+        
+        h2 {
+            margin: 100px auto 30px;
+            font-size: 18px;
+        }
+    }
+    .table-adjust {
+        margin-top: 70px;
+    }
+    .table th,
+    .table td {
+    float: left;
+    border:none;
+    }
+}

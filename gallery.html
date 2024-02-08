@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title></title>
+
+    <!-- reset,sanitize,style -->
+    
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
+    -->
+    <link rel="stylesheet" href="./style/magnific-popup.css">
+    <!-- animate.css -->
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NMVMKDZDCK');
+    </script>
+</head>
+<body>
+    <div id="logo-media">
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <h1><a href="index.html">IZUMI SATO</a></h1>
+    </div>
+    <nav>
+        <div id="logo"><h1><a href="index.html">IZUMI SATO</a></h1></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><h2 class="text">Home</h2></a></li>
+            <li><a href="about.html"><h2 class="text">About</h2></a></li>
+            <li><a href="gallery.html" class="active"><h2 class="text">Gallery</h2></a></li>
+            <li><a href="contact.html"><h2 class="text">Contact</h2></a></li>
+            <li><a href="https://www.instagram.com/izumi___printmaker/" target="_blank"><h2 class="text">Instagram</h2></a></li>
+            <li><a href="https://www.etsy.com/jp/shop/izumisatoart" ><h2 class="textF">Shop</h2></a></li>
+        </ul>
+    </nav>
+    <div id="gallery-container" class="gallery-container">
+        <div class="gallery-text">
+            <img src="./img/Gallery.png" alt="">
+        </div>
+        <div class="gallery-select">
+            <div class="yajirushi">
+                <img class="yajirushi1" src="./img/yajirushi1.png" alt="yajirushi1">
+            </div>
+            <form>
+                <select id="2019" v-model="selected">
+                    <option value="2007" v-on:click="selected = '2007'">2007</option>
+                    <option value="2008" v-on:click="selected = '2008'">2008</option>
+                    <option value="2009" v-on:click="selected = '2009'">2009</option>
+                    <option value="2010" v-on:click="selected = '2010'">2010</option>
+                    <option value="2019" v-on:click="selected = '2019'">2019</option>
+                    <option value="2020" v-on:click="selected = '2020'">2020</option>
+                </select>
+            </form>
+            <div class="yajirushi">
+                <img class="yajirushi2" src="./img/yajirushi2.png" alt="yajirushi2">
+            </div>
+        </div>
+        <div class="gallery-main">
+            <p class="popup-2007" v-show="selected === '2007'">
+                <a href="./img/popup-2007/1.jpg" title="恵みは静かにふりそそぎ
+                　Amazing grace　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2007/1.jpg" alt="恵みは静かにふりそそぎ
+                    　Amazing grace" width="200"></a>
+                <a href="./img/popup-2007/2.jpg" title="MotherⅠ　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2007/2.jpg" alt="Mother Ⅰ" width="200"></a>
+                <a href="./img/popup-2007/3.jpg" title="一つの扉が閉じると百の扉が開く　When one door closes, a hundred doors open　　47cm×35cm"><img class="animate__animated animate__fadeIn" src="./img/2007/3.jpg" alt="一つの扉が閉じると百の扉が開く　When one door closes, a hundred doors open" width="200"></a>
+                <a href="./img/popup-2007/4.jpg" title="A and E　　30cm×18cm"><img class="animate__animated animate__fadeIn" src="./img/2007/4.jpg" alt="A and E" width="200"></a>
+                <a href="./img/popup-2007/5.jpg" title="Dialogue　　15cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2007/5.jpg" alt="Dialogue" width="200"></a>
+                <a href="./img/popup-2007/6.jpg" title="春節　Chinese New Year　　16cm×21cm"><img class="animate__animated animate__fadeIn" src="./img/2007/6.jpg" alt="春節 Chinese New Year" width="200"></a>
+                <a href="./img/popup-2007/7.jpg" title="Unexpected　　30cm×30cm"><img class="animate__animated animate__fadeIn" src="./img/2007/7.jpg" alt="Unexpected" width="200"></a>
+            </p>
+            <p class="popup-2008" v-show="selected === '2008'">
+                <a href="./img/popup-2008/1.jpg" title="恵みは静かにふりそそぎⅡ　Amazing grace Ⅱ　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2008/1.jpg" alt="恵みは静かにふりそそぎⅡ　Amazing grace Ⅱ" width="200"></a>
+                <a href="./img/popup-2008/2.jpg" title="樹　a tree　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2008/2.jpg" alt="樹　a tree" width="200"></a>
+                <a href="./img/popup-2008/3.jpg" title="灯　Light　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2008/3.jpg" alt="灯　Light" width="200"></a>
+                <a href="./img/popup-2008/4.jpg" title="Mother Ⅱ　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2008/4.jpg" alt="Mother Ⅱ" width="200"></a>
+                <a href="./img/popup-2008/5.jpg" title="WAN　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2008/5.jpg" alt="WAN" width="200"></a>
+                <a href="./img/popup-2008/6.jpg" title="月光　Moon　　18cm×15cm"><img class="animate__animated animate__f　adeIn" src="./img/2008/6.jpg" alt="月光　Moon" width="200"></a>
+                <a href="./img/popup-2008/7.jpg" title="Kan kan cow　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2008/7.jpg" alt="Kan kan cow" width="200"></a>
+                <a href="./img/popup-2008/8.jpg" title="SAKANA　　18cm×15cm"><img class="animate__animated animate__fadeIn" src="./img/2008/8.jpg" alt="SAKANA" width="200"></a>
+            </p>
+            <p class="popup-2009" v-show="selected === '2009'">
+                <a href="./img/popup-2009/1.jpg" title="絶えず祈れ　Ⅰ　pray at all times　Ⅰ　　20cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2009/1.jpg" alt="絶えず祈れ　Ⅰ　pray at all times　Ⅰ" width="200"></a>
+                <a href="./img/popup-2009/2.jpg" title="絶えず祈れ　Ⅱ　pray at all times　Ⅱ　　20cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2009/2.jpg" alt="絶えず祈れ　Ⅱ　pray at all times　Ⅱ" width="200"></a>
+                <a href="./img/popup-2009/3.jpg" title="絶えず祈れ　Ⅲ　pray at all times　Ⅲ　　20cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2009/3.jpg" alt="絶えず祈れ　Ⅲ　pray at all times　Ⅲ" width="200"></a>
+                <a href="./img/popup-2009/4.jpg" title="絶えず祈れ　Ⅳ　pray at all times　Ⅳ　　20cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2009/4.jpg" alt="絶えず祈れ　Ⅳ　pray at all times　Ⅳ" width="200"></a>
+                <a href="./img/popup-2009/5.jpg" title=""><img class="animate__animated animate__fadeIn" src="./img/2009/5.jpg" alt="" width="200"></a>
+                <a href="./img/popup-2009/6.jpg" title="静かな夜明けに　At a quiet dawn　　20cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2009/6.jpg" alt="静かな夜明けに　At a quiet dawn" width="200"></a>
+                <a href="./img/popup-2009/7.jpg" title="心の奥に　Deep inside my heart　　15cm×18cm"><img class="animate__animated animate__fadeIn" src="./img/2009/7.jpg" alt="心の奥に　Deep inside my heart" width="200"></a>
+                <a href="./img/popup-2009/8.jpg" title="空にラッパが響きわたり　A trumpet echoes in the sky　　15cm×18cm"><img class="animate__animated animate__fadeIn" src="./img/2009/8.jpg" alt="空にラッパが響きわたり　A trumpet echoes in the sky" width="200"></a>
+                <a href="./img/popup-2009/9.jpg" title="I know the plans I have for you　　26cm×23cm"><img class="animate__animated animate__fadeIn" src="./img/2009/9.jpg" alt="I know the plans I have for you" width="200"></a>
+            </p>
+            <p class="popup-2010" v-show="selected === '2010'">
+                <a href="./img/popup-2010/1.jpg" title="さまよえる仔羊　stray sheep　　20cm×17cm"><img class="animate__animated animate__fadeIn" src="./img/2010/1.jpg" alt="さまよえる仔羊　stray sheep" width="200"></a>
+                <a href="./img/popup-2010/2.jpg" title="さまよえる仔牛　stray calf　　20cm×17cm"><img class="animate__animated animate__fadeIn" src="./img/2010/2.jpg" alt="さまよえる仔牛　stray calf" width="200"></a>
+                <a href="./img/popup-2010/3.jpg" title="野草 Ⅰ　Wild grass Ⅰ　　25cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2010/3.jpg" alt="野草 Ⅰ　Wild grass Ⅰ" width="200"></a>
+                <a href="./img/popup-2010/4.jpg" title="野草 Ⅱ　Wild grass Ⅱ　　25cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2010/4.jpg" alt="野草 Ⅱ　Wild grass Ⅱ" width="200"></a>
+                <a href="./img/popup-2010/5.jpg" title="浜辺の祈り　Seaside prayers　　24cm×20cm"><img class="animate__animated animate__fadeIn" src="./img/2010/5.jpg" alt="浜辺の祈り　Seaside prayers" width="200"></a>
+                <a href="./img/popup-2010/6.jpg" title="雲の祈り人　Prayer on the clouds　　20cm×25cm"><img class="animate__animated animate__fadeIn" src="./img/2010/6.jpg" alt="雲の祈り人　Prayer on the clouds" width="200"></a>
+                <a href="./img/popup-2010/7.jpg" title="飛ぶに時あり　A time to be fly　　22cm×45"><img class="animate__animated animate__fadeIn" src="./img/2010/7.jpg" alt="飛ぶに時あり　A time to be fly" width="200"></a>
+                <a href="./img/popup-2010/8.jpg" title="森の祈り人　Forest prayers"><img class="animate__animated animate__fadeIn" src="./img/2010/8.jpg" alt="森の祈り人　Forest prayers" width="200"></a>
+                <a href="./img/popup-2010/9.jpg" title="a tree Ⅳ　　20cm×17cm"><img class="animate__animated animate__fadeIn" src="./img/2010/9.jpg" alt="a tree Ⅳ" width="200"></a>
+                <a href="./img/popup-2010/10.jpg" title="a tree Ⅱ　　20cm×17cm"><img class="animate__animated animate__fadeIn" src="./img/2010/10.jpg" alt="a tree Ⅱ" width="200"></a>
+            </p>
+            <p class="popup-2019" v-show="selected === '2019'">
+                <a href="./img/popup-2019/1.jpg" class="animate__animated animate__fadeIn" title="Sheep　Ⅱ　　15×22cm"><img class="imgAni" src="./img/2019/1.jpg" alt="Sheep　Ⅱ" width="200"></a>
+                <a href="./img/popup-2019/2.jpg" class="animate__animated animate__fadeIn" title="Sheep　Ⅱ　　post card"><img class="imgAni" src="./img/2019/2.jpg" alt="Sheep　Ⅱ　　post card" width="200"></a>
+                <a href="./img/popup-2019/3.jpg" class="animate__animated animate__fadeIn" title="Sheep　Ⅰ　　15×22cm"><img class="imgAni" src="./img/2019/3.jpg" alt="Sheep　Ⅰ" width="200"></a>
+                <a href="./img/popup-2019/4.jpg" class="animate__animated animate__fadeIn" title="Olive　　post card"><img class="imgAni" src="./img/2019/4.jpg" alt="Olive　　post card" width="200"></a>
+                <a href="./img/popup-2019/5.jpg" class="animate__animated animate__fadeIn" title="Olive　　15×22cm"><img class="imgAni" src="./img/2019/5.jpg" alt="Olive" width="200"></a>
+                <a href="./img/popup-2019/6.jpg" class="animate__animated animate__fadeIn" title="Moning burn　　15×22cm"><img class="imgAni" src="./img/2019/6.jpg" alt="Moning burn" width="200"></a>
+                <a href="./img/popup-2019/7.jpg" class="animate__animated animate__fadeIn" title="Night fall　Ⅱ　　22×21cm"><img class="imgAni" src="./img/2019/7.jpg" alt="Night fall　Ⅱ" width="200"></a>
+                <a href="./img/popup-2019/8.jpg" class="animate__animated animate__fadeIn" title="Horned sheep　　22×21cm"><img class="imgAni" src="./img/2019/8.jpg" alt="Horned sheep" width="200"></a>
+                <a href="./img/popup-2019/9.jpg" class="animate__animated animate__fadeIn" title="Lemon　　22×21cm"><img class="imgAni" src="./img/2019/9.jpg" alt="Lemon" width="200"></a>
+                <a href="./img/popup-2019/10.jpg" class="animate__animated animate__fadeIn" title="Sheep Ⅴ Color Rubber print　　7×6.5cm"><img class="imgAni" src="./img/2019/10.jpg" alt="Sheep Ⅴ Color Rubber print" width="200"></a>
+                <a href="./img/popup-2019/11.jpg" class="animate__animated animate__fadeIn" title="Sheep Ⅴ Rubber print　　7×6.5cm"><img class="imgAni" src="./img/2019/11.jpg" alt="Sheep Ⅴ Rubber print" width="200"></a>
+                <a href="./img/popup-2019/12.jpg" class="animate__animated animate__fadeIn" title="静寂の森　Quitness of the forest　　45×44cm"><img class="imgAni" src="./img/2019/12.jpg" alt="静寂の森　Quitness of the forest" width="200"></a>
+                <a href="./img/popup-2019/13.jpg" class="animate__animated animate__fadeIn" title="Silent woods Ⅲ　　8×22.5cm"><img class="imgAni" src="./img/2019/13.jpg" alt="Silent woods Ⅲ" width="200"></a>
+                <a href="./img/popup-2019/14.jpg" class="animate__animated animate__fadeIn" title="Silent woods Ⅱ　　8×22.5cm"><img class="imgAni" src="./img/2019/14.jpg" alt="Silent woods Ⅱ" width="200"></a>
+                <a href="./img/popup-2019/15.jpg" class="animate__animated animate__fadeIn" title="forest　　30×42cm"><img class="imgAni" src="./img/2019/15.jpg" alt="forest" width="200"></a>
+                <a href="./img/popup-2019/16.jpg" class="animate__animated animate__fadeIn" title="Sheep Ⅲ"><img class="imgAni" src="./img/2019/16.jpg" alt="Sheep Ⅲ" width="200"></a>
+                <a href="./img/popup-2019/17.jpg" class="animate__animated animate__fadeIn" title="Sheep Rain color　　15×22cm"><img class="imgAni" src="./img/2019/17.jpg" alt="Sheep Rain color" width="200"></a>
+                <a href="./img/popup-2019/18.jpg" class="animate__animated animate__fadeIn" title="Sheep Ⅷ　　22.5×21cm"><img class="imgAni" src="./img/2019/18.jpg" alt="Sheep Ⅷ" width="200"></a>
+                <a href="./img/popup-2019/19.jpg" class="animate__animated animate__fadeIn" title="Sheep Ⅳ　　17×20cm"><img class="imgAni" src="./img/2019/19.jpg" alt="Sheep Ⅳ" width="200"></a>
+                <a href="./img/popup-2019/20.jpg" class="animate__animated animate__fadeIn" title="Sheep Ⅳ　　postcard"><img class="imgAni" src="./img/2019/20.jpg" alt="Sheep Ⅳ" width="200"></a>
+                <a href="./img/popup-2019/21.jpg" class="animate__animated animate__fadeIn" title="静けさの森　Silent woods　　22.5×7.5cm"><img class="imgAni" src="./img/2019/21.jpg" alt="静けさの森　Silent woods" width="200"></a>
+                <a href="./img/popup-2019/22.jpg" class="animate__animated animate__fadeIn" title="Pine come　Ⅱ　　15×15cm"><img class="imgAni" src="./img/2019/22.jpg" alt="Pine come　Ⅱ" width="200"></a>
+                <a href="./img/popup-2019/23.jpg" class="animate__animated animate__fadeIn" title="Pine come　Ⅲ　　15×15cm"><img class="imgAni" src="./img/2019/23.jpg" alt="Pine come　Ⅲ" width="200"></a>
+                <a href="./img/popup-2019/24.jpg" class="animate__animated animate__fadeIn" title="Pine come　Ⅰ　　15×15cm·"><img class="imgAni" src="./img/2019/24.jpg" alt="Pine come　Ⅰ" width="200"></a>
+                </p>
+            <p class="popup-2020" v-show="selected === '2020'">
+                <a href="./img/popup-2020/1.jpg" title="Pear Blossom　　12×15cm"><img class="animate__animated animate__fadeIn"  src="./img/2020/1.jpg" alt="Pear Blossom" width="200"></a>
+                <a href="./img/popup-2020/2.jpg" title="gamasumi　　15×22cm"><img class="animate__animated animate__fadeIn"  src="./img/2020/2.jpg" alt="gamasumi" width="200"></a>
+                <a href="./img/popup-2020/3.jpg" title="sheep in the forest　　26×30cm"><img class="animate__animated animate__fadeIn"  src="./img/2020/3.jpg" alt="sheep in the forest" width="200"></a>
+                <a href="./img/popup-2020/4.jpg" title=""><img class="animate__animated animate__fadeIn"  src="./img/2020/4.jpg" alt="" width="200"></a>
+                <a href="./img/popup-2020/5.jpg" title="Waltz of leaves print　　18×22cm"><img class="animate__animated animate__fadeIn"  src="./img/2020/5.jpg" alt="Waltz of leaves print" width="200"></a>
+                <a href="./img/popup-2020/6.jpg" title="Waltz of leaves color"><img class="animate__animated animate__fadeIn"  src="./img/2020/6.jpg" alt="Waltz of leaves color" width="200"></a>
+            </p>
+        </div>
+    </div>
+           
+    <footer>
+        <small><p>© IZUMI SATO 2020</p></small>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#gallery-container',
+            data: {
+                selected: '2019',
+            },
+        });
+    </script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        //nav-animation
+        const tl = gsap.timeline({defaults: {ease: Sine.easeOut}});
+        
+
+        tl.fromTo('.text', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 1, stagger: 0.25});
+        tl.fromTo('.textF', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 2}, '-=0.7');
+        tl.fromTo('.imgAni', {y: '-20%', opacity: 0},  {y: '0%', opacity: 1, duration: 1, stagger: 0.25}, '-=3');
+        tl.fromTo('.imgAniF', {y: '-20%', opacity: 0},  {y: '0%', opacity: 1, duration: 2}, '-=2.6');
+    </script>   
+    <!-- Magnific -->
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/gallery.js"></script>        
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>

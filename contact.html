@@ -1,0 +1,170 @@
+<?php
+    $name_error = $email_error = "";
+    $name = $email = $message = "";
+    $message_sent = false;
+    if($_SERVER['REQUEST_METHOD'] == "POST") {
+        
+        if (empty($_POST["name"])) {
+            $name_error = "Name is required";
+        } else {
+            $name = $_POST["name"];
+            if (!preg_match("/[ぁ-ん]+|[ァ-ヴー]+|[一-龠]+|[a-zA-Z0-9]/u", $name)) {
+            $name_error = "Only letters";}
+        }
+    
+        if (empty($_POST["email"])) {
+            $email_error = "Email is required";
+        } else {
+            $email = $_POST["email"];
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $email_error = "Invalid email format";
+            }
+        }
+    
+        if (empty($_POST["subject"])) {
+            $subject = "";
+        } else {
+            $subject = $_POST["subject"];
+        }
+        
+    
+        if (empty($_POST["message"])) {
+            $message = "";
+        } else {
+            $message = $_POST["message"];
+        }
+
+        if( $name_error == '' and $email_error == '' ) {
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $to = "izumiprintmaker@gmail.com";
+        $body = "";
+
+        $body .= "From: ".$name. "\r\n";
+        $body .= "Email: ".$email. "\r\n";
+        $body .= "Message: ".$message. "\r\n";
+
+        mail($to,$subject,$body);
+        $name = $email = $subject = $message = '';
+        $message_sent = true;
+        }
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title></title>
+
+    <!-- animate.css -->
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- reset,sanitize,style -->
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NMVMKDZDCK');
+    </script>
+</head>
+<body>
+    <div id="logo-media">
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <h1><a href="index.html">IZUMI SATO</a></h1>
+    </div>
+    <nav>
+        <div id="logo"><h1><a href="index.html">IZUMI SATO</a></h1></div>
+        <ul class="nav-links">
+            <li><a href="index.html"><h2 class="text">Home</h2></a></li>
+            <li><a href="about.html"><h2 class="text">About</h2></a></li>
+            <li><a href="gallery.html"><h2 class="text">Gallery</h2></a></li>
+            <li><a href="contact.html" class="active"><h2 class="text">Contact</h2></a></li>
+            <li><a href="https://www.instagram.com/izumi___printmaker/" target="_blank"><h2 class="text">Instagram</h2></a></li>
+            <li><a href="https://www.etsy.com/jp/shop/izumisatoart" ><h2 class="textF">Shop</h2></a></li>
+        </ul>
+    </nav>
+    <div class="contact-container">
+        <div class="contact-bird">
+            <h2 class="contact-text" style="letter-spacing: 3px;">Contact</h2>
+            <img class="animate__animated animate__fadeIn" src="./img/contact-bird.png" alt="bird">
+            
+        </div>
+        <div class="contact-info">
+            <p>※ 作品に関するお問い合わせは、<br>こちらまでご連絡ください。</p>
+        </div>
+        <div class="contact-info" style="margin-top: 10px;">
+            <p>※ if you have any question about my works,<br>please contact me by email or visit Esty homepage.</p>
+        </div>
+         <?php
+        if($message_sent):
+        ?>
+
+        <div style="width: 100%; height: 40vh; display: flex; justify-content: center; align-items: center; text-align: center;">
+           <h3 style="font-size: 25px">Thank you for your contact!</h3>
+        </div>
+        
+        <?php
+        else:
+        ?>
+            <form class="contact-form" action="<?= $SERVER['PHP_SELF']; ?>" method="post">
+                <input class="" type="text" name="name" placeholder="Full Name *" value="<?= $name ?>">
+                <span class="error"><?= $name_error ?></span>
+                <input class="" type="text" name="email" placeholder="Email *" value="<?= $email ?>">
+                <span class="error"><?= $email_error ?></span>
+                <input class="" type="text" name="subject" placeholder="Subject" value="<?= $subject ?>">
+                
+                <textarea class="contactFonts " type="text" name="message" placeholder="Message" value="<?= $message ?>"></textarea>
+                
+                <button class="" type="submit" name="submit">Send</button>
+            
+            </form>
+        <?php
+        endif;
+        ?>
+       
+    </div>
+           
+    <footer>
+        <small><p>© IZUMI SATO 2020</p></small>
+    </footer>
+    
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    
+    <script>
+        //nav-animation
+        const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
+
+        tl.fromTo('.text', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 1, stagger: 0.25});
+        tl.fromTo('.textF', {y: '-100%', opacity: 0},  {y: '0%', opacity: 1, duration: 2}, '-=0.6');
+    
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

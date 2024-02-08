@@ -1,0 +1,65 @@
+.gallery-container {
+    width: 80%;
+    //height: 200vh;
+    //background: rgb(94, 94, 94);
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .gallery-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 80%;
+            margin: 50px auto;
+        }
+    }
+    .gallery-select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column !important;
+        width: 100%;
+        height: 130px;
+        //margin: 50px auto;
+        select {
+            cursor: pointer;
+            font-family: 'Quattrocento Sans', sans-serif;
+            letter-spacing: 1px;
+            border: none;
+            padding: 5px 30px;
+            transition: all 0.5s ease;
+            background-color: #fff;
+            -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+            -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+            appearance: none; /* 標準のスタイルを無効にする */
+            &:hover,&:focus {
+                outline: none;
+                border: 1px solid #c2c2c2;     
+            }
+        }
+        .yajirushi {
+            margin: 6px auto;
+            height: 20px;
+            .yajirushi1,
+            .yajirushi2
+            {
+                width: 15px;
+                height: 8px;
+            }
+        }
+    }
+    .gallery-main {
+        max-width: 668px;
+        text-align: center;
+        //animation-duration: 2s;
+        img {
+            margin: 0 auto;
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid #ebebeb;
+            animation-duration: 1s;
+        }
+    }
+}
